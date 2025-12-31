@@ -5643,7 +5643,7 @@ ul.wp-block-latest-posts li:last-child {
 
 .header-layout1 .header-navbar-logo {
   margin-top: 0;
-  /* padding: 15px 0; */
+  padding: 15px 0;
   padding-left: 60px;
   position: absolute;
   z-index: 3;
