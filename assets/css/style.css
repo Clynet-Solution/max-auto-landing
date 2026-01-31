@@ -81,6 +81,8 @@
   --theme-color: #e8092e;
   --title-color: #171717;
   --body-color: #171717;
+  --accent-color: #f05a28;
+  --muted-color: #2b9adf;
   --smoke-color: #f4f4f4;
   --smoke-color2: #f6f6f7;
   --smoke-color3: #f5f5f6;
@@ -2429,9 +2431,9 @@ h3.sec-title {
     font-size: 45px;
     line-height: 1.2;
   }
-  .sec-text {
+  /* .sec-text {
     margin-top: 0px;
-  }
+  } */
 }
 
 /* Large devices */
@@ -17974,6 +17976,7 @@ li.trackback {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
 }
 .mission-area-creative .pill {
+  position: relative;
   display: flex;
   gap: 14px;
   align-items: flex-start;
@@ -17986,9 +17989,14 @@ li.trackback {
   /* allow flex-basis to control width */
 }
 .mission-area-creative .badge {
+  position: relative;
   width: 52px;
   height: 52px;
   border-radius: 50%;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  margin: 0 20px 0 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -17996,13 +18004,13 @@ li.trackback {
   font-weight: 700;
 }
 .mission-area-creative .badge--primary {
-  background: #111;
+  background: var(--theme-color);
 }
 .mission-area-creative .badge--accent {
-  background: #f05a28;
+  background: var(--accent-color);
 }
 .mission-area-creative .badge--muted {
-  background: #2b9adf;
+  background: var(--muted-color);
 }
 .mission-area-creative .pill .body {
   flex: 1;
@@ -18089,23 +18097,80 @@ li.trackback {
   }
 }
 
-.promo-package .promo-ad{background:var(--white-color);padding:28px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--border-color);box-shadow:0 8px 30px rgba(23,23,23,0.04)}
-.promo-package .sub-title{color:var(--theme-color);font-weight:700;display:block}
-.promo-package .promo-title{font-size:26px;margin:6px 0;color:var(--title-color);font-weight:700}
-.promo-package .promo-desc{color:var(--light-color);max-width:640px}
-.promo-package .promo-cta .btn{margin-left:12px}
-.promo-package .style-border3{background:transparent;border:1px solid var(--border-color);color:var(--title-color)}
-@media(max-width:767px){
-  .promo-package .promo-ad{flex-direction:column;text-align:center}
-  .promo-package .promo-cta .btn{width:100%;margin:8px 0}
+.promo-package .promo-ad {
+  background: var(--white-color);
+  padding: 28px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 30px rgba(23, 23, 23, 0.04);
+}
+.promo-package .sub-title {
+  color: var(--theme-color);
+  font-weight: 700;
+  display: block;
+}
+.promo-package .promo-title {
+  font-size: 26px;
+  margin: 6px 0;
+  color: var(--title-color);
+  font-weight: 700;
+}
+.promo-package .promo-desc {
+  color: var(--light-color);
+  max-width: 640px;
+}
+.promo-package .promo-cta .btn {
+  margin-left: 12px;
+}
+.promo-package .style-border3 {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--title-color);
+}
+@media (max-width: 767px) {
+  .promo-package .promo-ad {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-package .promo-cta .btn {
+    width: 100%;
+    margin: 8px 0;
+  }
 }
 
 /* promo package highlights */
-.promo-badge{background:var(--theme-color);color:#fff;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block}
-.promo-highlight{color:var(--theme-color);font-weight:800}
-.promo-includes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.promo-includes .chip{background:var(--smoke-color4);padding:6px 10px;border-radius:20px;color:var(--title-color);font-size:13px;border:1px solid var(--border-color)}
+.promo-badge {
+  background: var(--theme-color);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
 }
+.promo-highlight {
+  color: var(--theme-color);
+  font-weight: 800;
+}
+.promo-includes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.promo-includes .chip {
+  background: var(--smoke-color4);
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: var(--title-color);
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+}
+
 .promo-package .promo-ad {
   background: var(--white-color);
   padding: 28px;
